@@ -4,11 +4,11 @@ require('dotenv').config()
 
 //Before .env file doen't have
  const pool = new Pool({
-    user: 'postgres',
-    password: '1234',
-    host: 'localhost',
-    port: 5432,
-    database: 'todoapp'
+    user: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    host: process.env.PGHOST,
+    port: process.env.PGPORT,
+    database: process.env.PGDATABASE
 })
 
 
